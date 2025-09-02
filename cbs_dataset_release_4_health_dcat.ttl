@@ -1,0 +1,177 @@
+@prefix n0: <https://eur-lex.europa.eu/eli/reg/2025/327/>.
+@prefix he: <http://healthdataportal.eu/resource/authority/healthcategories/>.
+@prefix ent: <http://www.wikidata.org/entity/>.
+@prefix n1: <http://publications.europa.eu/resource/authority/access-right/>.
+@prefix fre: <http://publications.europa.eu/resource/authority/frequency/>.
+@prefix c: <https://ehdsfdp.healthdataportal.eu:443/catalog/>.
+@prefix l: <http://publications.europa.eu/resource/authority/language/>.
+@prefix pub: <http://healthdataportal.eu/resource/authority/publisher-type/>.
+@prefix code: <http://data.europa.eu/nuts/code/>.
+@prefix d: <http://publications.europa.eu/resource/authority/dataset-type/>.
+@prefix d0: <http://publications.europa.eu/resource/authority/data-theme/>.
+@prefix tijd: <https://www.cbs.nl/nl-nl/reeksen/tijd/>.
+@prefix ont: <http://data.europa.eu/eli/ontology#>.
+@prefix Res: <https://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix dpv: <https://w3id.org/dpv#>.
+@prefix dpvpd: <https://w3id.org/dpv/dpv-pd#>.
+@prefix locn: <http://www.w3.org/ns/locn#>.
+@prefix healthdcatap: <http://healthdataportal.eu/ns/health#>.
+@prefix dcatap: <http://data.europa.eu/r5r/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix technical: <http://technical.fdp/>.
+@prefix TXT: <https://eur-lex.europa.eu/legal-content/EN/TXT/>.
+@prefix fil: <http://publications.europa.eu/resource/authority/file-type/>.
+@prefix OD: <https://opendata.cbs.nl/ODataApi/OData/>.
+@prefix n2: <http://www.iana.org/assignments/media-types/application/>.
+
+<blankNode:dataset>
+    a dcat:Dataset, dcat:Resource;
+    dcatap:applicableLegislation n0:oj;
+    healthdcatap:hdab
+            [
+                a foaf:Agent, foaf:Organization;
+                locn:address
+                        [
+                            a locn:Address;
+                            locn:adminUnitL1
+                            "http://data.europa.eu/nuts/code/NL"
+                        ];
+                foaf:homepage <http://www.health-ri.nl>;
+                foaf:mbox <mailto:info@health-ri.nl>;
+                foaf:name "Health-RI"
+            ];
+    healthdcatap:healthCategory he:PHDR;
+    healthdcatap:healthTheme ent:Q1931388;
+    healthdcatap:maxTypicalAge "100"^^xsd:nonNegativeInteger;
+    healthdcatap:minTypicalAge "0"^^xsd:nonNegativeInteger;
+    healthdcatap:numberOfRecords "100"^^xsd:nonNegativeInteger;
+    dct:accessRights n1:PUBLIC;
+    dct:accrualPeriodicity fre:QUARTERLY;
+    dct:creator <internalURI:creator0>;
+    dct:description
+        "Deze tabel bevat cijfers over de onderliggende doodsoorzaken van overleden inwoners van Nederland. De cijfers zijn uitgesplitst per kwartaal en jaar van overlijden naar een beperkt aantal doodsoorzaken.  De sterfte aan COVID-19 of de ziekte veroorzaakt door het nieuwe coronavirus wordt gecodeerd met de ICD-10 codes U07.1 of U07.2. Deze codes zijn door de Wereldgezondheidsorganisatie (WHO) als 'emergency codes' of tijdelijke noodcodes neergezet en zullen later in een hoofdstuk van de ICD10 opgenomen worden. Deze codes worden daarom nu nog in de kwartaal tabel geteld bij de categorie 'Overige doodsoorzaken'.  Het CBS is in het statistiekjaar 2013 overgestapt op het gebruik van internationale software voor automatisch coderen van de doodsoorzaken. Hiermee zijn de cijfers beter reproduceerbaar en internationaal vergelijkbaar. Wel zijn er enkele forse verschuivingen te zien in de doodsoorzaken (zie paragraaf 4).  Gegevens beschikbaar vanaf: 1e kwartaal 1996  Status van de cijfers: De cijfers over 2024 zijn voorlopig, de overige cijfers zijn definitief.   Wijzigingen per 16 mei 2025: De voorlopige cijfers over het vierde kwartaal en het totaal van 2024 zijn toegevoegd, de cijfers over de eerste drie kwartalen van 2024 zijn aangepast.   Wanneer komen er nieuwe cijfers? In het derde kwartaal van 2025 verschijnen cijfers over het eerste kwartaal van 2025."@nl;
+    dct:identifier
+    "https://opendata.cbs.nl/ODataApi/OData/82899NED"^^xsd:anyURI;
+    dct:isPartOf c:4329f5bd-f60f-483a-8f99-18ec996eb0d5;
+    dct:issued "2025-05-01T00:00:00.000Z"^^xsd:dateTime;
+    dct:language l:NLD;
+    dct:modified "2025-05-01T00:00:00.000Z"^^xsd:dateTime;
+    dct:provenance <internalURI:datasetProvenance0>;
+	healthdcatap:publisherNote
+                    "CBS (Centraal Bureau voor de Statistiek) is the national statistical office of the Netherlands, responsible for collecting, analyzing, and publishing reliable data on the economy, society, and population. As a publisher, CBS provides open access to official statistics, reports, and datasets that support research, policymaking, and public understanding."@en;
+                healthdcatap:publisherType pub:statitics;
+    dct:publisher
+            [
+                a foaf:Agent;
+                healthdcatap:trustedDataHolder true;
+                foaf:homepage <http://www.cbs.nl>;
+                foaf:mbox <mailto:infoservice@cbs.nl>;
+                foaf:name "Centraal Bureau voor de statistiek"
+            ];
+    dct:spatial code:NL;
+    dct:title
+        "Overleden inwoners van Nederland naar onderliggende doodsoorzaak per kwartaal en jaar van overlijden"@nl;
+    dct:type d:STATISTICAL;
+    technical:modified "2025-09-02T10:51:37.136Z"^^xsd:dateTime;
+    dcat:contactPoint <internalURI:contactPoint0>;
+    dcat:distribution <blankNode:distribution-0>;
+    dcat:keyword "Doodsoorzaken"@nl;
+    dcat:landingPage
+        <https://opendata.cbs.nl/statline/portal.html?_la=nl&_catalog=CBS&tableId=82899NED>;
+    dcat:spatialResolutionInMeters 0.0;
+    dcat:temporalResolution "P5Y1M"^^xsd:duration;
+    dcat:theme d0:HEAL;
+    prov:qualifiedAttribution <internalURI:qualifiedAttribution0>;
+    foaf:page tijd:doodsoorzaken;
+    dpv:hasPersonalData dpvpd:Age;
+    dpv:hasPurpose <internalURI:datasetPurpose0>.
+<blankNode:distribution-0>
+    a dcat:Distribution;
+    dcatap:applicableLegislation TXT:;
+    dct:description
+        """Overleden inwoners van Nederland naar onderliggende doodsoorzaak per 
+kwartaal en jaar van overlijden"""@en;
+    dct:format fil:JSON;
+    dct:isPartOf <blankNode:dataset>;
+    dct:language l:NLD;
+    dct:title
+        "Overleden inwoners van Nederland naar onderliggende doodsoorzaak per  kwartaal en jaar van overlijden"@en;
+    dcat:accessService
+            [
+                a dcat:DataService;
+                dct:title
+                "Overledenen; doodsoorzaak, kwartaal en jaar overlijden"@en;
+                dcat:endpointURL
+                    <https://opendata.cbs.nl/statline/#/CBS/nl/dataset/82899NED/table>
+            ];
+    dcat:accessURL
+    <https://opendata.cbs.nl/statline/#/CBS/nl/dataset/82899NED/table>;
+    dcat:byteSize "100000"^^xsd:decimal;
+    dcat:downloadURL OD:82899NED;
+    dcat:mediaType n2:json.
+code:NL a dct:Location.
+
+he:PHDR
+    a skos:Concept;
+    skos:prefLabel
+    "Population-based health data registries (public health registries)"@en.
+n1:PUBLIC a dct:RightsStatement.
+
+d0:HEAL a skos:Concept; skos:prefLabel "Health"@en.
+
+d:STATISTICAL a skos:Concept; skos:prefLabel "Statistical"@en.
+
+fil:JSON a dct:MediaTypeOrExtent.
+
+fre:QUARTERLY a dct:Frequency.
+
+l:NLD a dct:LinguisticSystem.
+
+n2:json a dct:MediaType.
+
+ent:Q1931388 a skos:Concept; skos:prefLabel "cause of death"@en.
+
+n0:oj a ont:LegalResource.
+
+TXT: a ont:LegalResource.
+
+Res:owner a dcat:Role; skos:prefLabel "Owner - party that owns the resource"@en.
+
+<https://opendata.cbs.nl/statline/portal.html?_la=nl&_catalog=CBS&tableId=82899NED>
+a foaf:Document.
+dpvpd:Age a dpv:PersonalData.
+
+tijd:doodsoorzaken a foaf:Document; rdfs:label "doodsoorzaken"@nl.
+
+<internalURI:contactPoint0>
+    a vcard:Kind, vcard:Organization;
+    vcard:fn "Centraal Bureau voor de statistiek";
+    vcard:hasEmail <mailto:infoservice@cbs.nl>;
+    vcard:hasURL <http://www.cbs.nl>.
+<internalURI:creator0>
+    a foaf:Agent;
+    foaf:homepage <http://www.cbs.nlq>;
+    foaf:mbox <mailto:infoservice@cbs.nl>;
+    foaf:name "Centraal bureau voor de statistiek".
+<internalURI:datasetProvenance0>
+    a dct:ProvenanceStatement;
+    rdfs:label
+        "De cijfers zijn afkomstig van doodsoorzaakverklaringen van artsen, die het CBS ontvangt van de gemeente waar iemand is overleden."@nl.
+<internalURI:datasetPurpose0>
+a dpv:Purpose; dct:description "Statistical overview"@en.
+<internalURI:qualifiedAttribution0>
+    a prov:Attribution;
+    dcat:hadRole Res:owner;
+    prov:agent
+    [ a foaf:Organization; foaf:name "Centraal Bureau voor de statistiek" ].
+<http://healthdataportal.eu/resource/authority/publisher-type/statitics>
+  a skos:Concept ;
+  skos:prefLabel "Statistical office"@en ;
+  skos:prefLabel "Statistisch bureau"@nl .
