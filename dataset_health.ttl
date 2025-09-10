@@ -123,8 +123,41 @@
                 <https://w3id.org/dpv/dpv-pd#HealthRecord>;
         <https://w3id.org/dpv#hasPurpose>
                 <https://w3id.org/dpv#AcademicResearch> ;
-        adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> .
+        adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
+        dcat:inSeries <http://example.com/series> .
 # still to add:        dct:source 
+
+<http://example.com/series>
+        a dcat:DatasetSeries ;
+        dcatap:applicableLegislation <http://data.europa.eu/eli/reg/2022/868/oj> ;
+        dcat:contactPoint [
+                a vcard:Kind ;
+                vcard:hasURL <http://example.com/text> ;
+                vcard:hasEmail <mailto:test@example.com> ;
+                vcard:fn "Test Example" ;
+        ] ;
+        dct:description "This is an example dataset series with dummy data" ;
+        dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/DAILY> ;
+        dct:spatial <http://publications.europa.eu/resource/authority/country/BEL> ;
+        dct:modified "2025-09-10T15:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        dct:publisher [
+                a foaf:Agent ;
+                dct:spatial <http://publications.europa.eu/resource/authority/country/BEL> ;
+                foaf:mbox <mailto:test@example.com> ;
+                dct:identifier "test" ;
+                foaf:name "Test Example" ;
+                healthdcatap:publisherNote "Example note" ;
+                healthdcatap:publisherType <http://purl.org/adms/publishertype/NationalAuthority> ;
+                dct:type <http://purl.org/adms/publishertype/NationalAuthority> ;
+                foaf:homepage <http://example.com/> ;
+        ] ;
+        dct:issued "2025-09-01T12:00:00Z"^^<<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        dct:temporal [
+                a dct:PeriodOfTime;
+                dcat:endDate "2024-12-31"^^<http://www.w3.org/2001/XMLSchema#date>;
+                dcat:startDate "2020-03-01"^^<http://www.w3.org/2001/XMLSchema#date>
+        ];
+        dct:title "Example dataset series"@en, "Voorbeeld dataset serie"@nl .
 
 <http://example.com/analytics>
         a                             dcat:Distribution;
