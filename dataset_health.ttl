@@ -158,6 +158,23 @@
           dct:rights       "open use";
           dcat:landingPage <http://example.org/landing>;
           dcat:keyword     "keyword1"@en, "trefwoord2"@nl ;
+          dcat:contactPoint [
+                a vcard:Kind ;
+                vcard:hasURL <http://example.com/text> ;
+                vcard:hasEmail <mailto:test@example.com> ;
+                vcard:fn "Test Example" ;
+          ] ;
+          dct:creator [
+                a foaf:Agent ;
+                dct:spatial <http://publications.europa.eu/resource/authority/country/BEL> ;
+                foaf:mbox <mailto:test@example.com> ;
+                dct:identifier "test" ;
+                foaf:name "Test Example" ;
+                healthdcatap:publisherNote "Example note" ;
+                healthdcatap:publisherType <http://purl.org/adms/publishertype/NationalAuthority> ;
+                dct:type <http://purl.org/adms/publishertype/NationalAuthority> ;
+                foaf:homepage <http://example.com/> ;
+          ] ;
         ] ;
         foaf:page <http://example.com/test> ;
         dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
