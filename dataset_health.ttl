@@ -122,7 +122,9 @@
                 <https://w3id.org/dpv/dpv-pd#Gender>,
                 <https://w3id.org/dpv/dpv-pd#HealthRecord>;
         <https://w3id.org/dpv#hasPurpose>
-                <https://w3id.org/dpv#AcademicResearch>.
+                <https://w3id.org/dpv#AcademicResearch> ;
+        adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> .
+# still to add:        dct:source 
 
 <http://example.com/analytics>
         a                             dcat:Distribution;
@@ -156,7 +158,10 @@
           dct:rights       "open use";
           dcat:landingPage <http://example.org/landing>;
           dcat:keyword     "keyword1"@en, "trefwoord2"@nl ;
-        ] .
+        ] ;
+        foaf:page <http://example.com/test> ;
+        dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+        dct:conformsTo <http://example.org/spec> .
 
 <http://www.iana.org/assignments/media-types/text/csv>
         a       dct:MediaType .
@@ -298,3 +303,5 @@
 #<http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0>
 #        a           dct:LicenseDocument;
 #        rdfs:label  "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported" .
+
+<http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> a skos:Concept .
