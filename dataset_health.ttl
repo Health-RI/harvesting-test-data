@@ -11,6 +11,7 @@
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 @prefix spdx:   <http://spdx.org/rdf/terms#> .
 @prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix healthdcatap: <http://healthdataportal.eu/ns/health#> .
 
 <http://example.healthdata.nl/set/dataset>
         a                               dcat:Resource , dcat:Dataset;
@@ -125,7 +126,7 @@
                 <https://w3id.org/dpv#AcademicResearch> ;
         adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
         dcat:inSeries <http://example.com/series> .
-# still to add:        dct:source 
+# still to add:        dct:source
 
 <http://example.com/series>
         a dcat:DatasetSeries ;
@@ -151,7 +152,7 @@
                 dct:type <http://purl.org/adms/publishertype/NationalAuthority> ;
                 foaf:homepage <http://example.com/> ;
         ] ;
-        dct:issued "2025-09-01T12:00:00Z"^^<<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        dct:issued "2025-09-01T12:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
         dct:temporal [
                 a dct:PeriodOfTime;
                 dcat:endDate "2024-12-31"^^<http://www.w3.org/2001/XMLSchema#date>;
