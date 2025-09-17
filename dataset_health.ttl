@@ -14,43 +14,32 @@
 @prefix healthdcatap: <http://healthdataportal.eu/ns/health#> .
 
 <http://example.healthdata.nl/set/dataset>
-        a                               dcat:Resource , dcat:Dataset;
-        dcatap:applicableLegislation    <http://data.europa.eu/eli/reg/2022/868/oj>;
-        <http://healthdataportal.eu/ns/health#analytics>
-                <http://example.com/analytics>;
-        <http://healthdataportal.eu/ns/health#hasCodeValues>
-                <http://example.com/code1>,
-                <http://example.com/code2>;
-        <http://healthdataportal.eu/ns/health#hasCodingSystem> <http://www.wikidata.org/entity/P1690>,
+        a dcat:Resource , dcat:Dataset;
+        dcatap:applicableLegislation <http://data.europa.eu/eli/reg/2022/868/oj>;
+        healthdcatap:analytics <http://example.com/analytics> ;
+        healthdcatap:hasCodeValues
+                <http://www.wikidata.org/entity/Q12125> ;
+        healthdcatap:hasCodingSystem <http://www.wikidata.org/entity/P1690>,
                                      <http://www.wikidata.org/entity/P4229>;
-        <http://healthdataportal.eu/ns/health#hdab>
+        healthdcatap:hdab
                 [ a              foaf:Organization;
                   foaf:homepage  <https://www.example.com/hdab>;
                   foaf:mbox      <mailto:hdab@example.com>;
                   foaf:name      "EU Health Data Access Body"@en, "EU Health Data Access Body"@nl ;
                 ];
-        <http://healthdataportal.eu/ns/health#healthCategory>
-                <http://example.com/ontology/resource/authority/healthcategories/PHDR> , <http://example.com/ontology/resource/authority/healthcategories/IDHP> , <http://example.com/ontology/resource/authority/healthcategories/DIOH> , <http://example.com/ontology/resource/authority/healthcategories/EHRS>;
-        <http://healthdataportal.eu/ns/health#healthTheme>
-                <http://www.wikidata.org/entity/Q7907952> , <http://www.wikidata.org/entity/Q58624061>;
-        <http://healthdataportal.eu/ns/health#maxTypicalAge>
-                "110"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
-        <http://healthdataportal.eu/ns/health#minTypicalAge>
-                "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
-        <http://healthdataportal.eu/ns/health#numberOfRecords>
-                "123456789"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
-        <http://healthdataportal.eu/ns/health#numberOfUniqueIndividuals>
-                "7654321"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
-        <http://healthdataportal.eu/ns/health#populationCoverage>
-                "This example includes a very non-descript population"@en, "Dit voorbeeld bevat een zeer nietszeggende populatie"@nl ;
-        <http://healthdataportal.eu/ns/health#publisherNote>
-                "Health-RI is the Dutch health care initiative to build an integrated health data infrastructure for research and innovation."@en,
+        healthdcatap:healthCategory <https://www.wikidata.org/entity/Q864217> , <http://www.wikidata.org/entity/Q30988757> ;
+        healthdcatap:healthTheme <http://www.wikidata.org/entity/Q7907952> , <http://www.wikidata.org/entity/Q58624061>;
+        healthdcatap:maxTypicalAge "110"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
+        healthdcatap:minTypicalAge "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
+        healthdcatap:numberOfRecords "123456789"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
+        healthdcatap:numberOfUniqueIndividuals "7654321"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>;
+        healthdcatap:populationCoverage "This example includes a very non-descript population"@en, "Dit voorbeeld bevat een zeer nietszeggende populatie"@nl ;
+        healthdcatap:publisherNote "Health-RI is the Dutch health care initiative to build an integrated health data infrastructure for research and innovation."@en,
                 "Health-RI is het Nederlandse gezondheidszorginitiatief om een geïntegreerde gezondheidsdatainfrastructuur voor onderzoek en innovatie op te bouwen."@nl ;
-        <http://healthdataportal.eu/ns/health#publisherType>
+        healthdcatap:publisherType
                 <http://example.com/publisherType/undefined>;
-         <http://healthdataportal.eu/ns/health#trustedDataHolder>
-                "true"^^<http://www.w3.org/2001/XMLSchema#boolean>;
-        <http://healthdataportal.eu/ns/health#retentionPeriod>
+         healthdcatap:trustedDataHolder true ;
+        healthdcatap:retentionPeriod
                 [ a               dct:PeriodOfTime;
                   rdfs:comment    "As stated in the CSI deliberation";
                   dcat:endDate    "2034-12-31"^^<http://www.w3.org/2001/XMLSchema#date>;
