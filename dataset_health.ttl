@@ -153,9 +153,7 @@
         dct:issued                    "2024-06-03T08:51:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
         dct:license                   <http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0>;
         dct:modified                  "2024-06-04T18:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-        dct:rights                    [ a           dct:RightsStatement;
-                                        rdfs:label  "_g_L202C11377" , "internalURI:wasGeneratedBy0" , "_g_L123C7733"
-                                      ];
+        dct:rights                    <internalURI:analyticsRightsStatement> ;
         dct:title                     "Technical report number of unique study subjects available by environment for project HDBP0250"@en,
                                       "Technisch rapport aantal unieke studiepersonen beschikbaar per omgeving voor project HDBP0250"@nl ;
         dcat:accessURL                <https://www.dummy.com/>;
@@ -176,7 +174,7 @@
           dct:format       <http://example.org/format>;
           dct:identifier   "service-123";
           dct:language     <http://publications.europa.eu/resource/authority/language/ENG>;
-          dct:rights       [ a dct:RightsStatement; rdfs:label "open use" ] ;
+          dct:rights       <internalURI:dataserviceRightsStatement> ;
           dcat:landingPage <http://example.org/landing>;
           dcat:keyword     "keyword1"@en, "trefwoord2"@nl ;
           dcat:contactPoint [
@@ -264,9 +262,7 @@
         dct:language                  <http://publications.europa.eu/resource/authority/language/ENG>;
         dct:license                   <http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0>;
         dct:modified                  "2024-06-04T18:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-        dct:rights                    [ a           dct:RightsStatement;
-                                        rdfs:label  "Free access."
-                                      ];
+        dct:rights                    <internalURI:sampleRightsStatement> ;
         dct:title                     "Proxy data generating for the EHDS2 Pilot project Sciensano Use Case"@en,
                                       "Proxygegevens gegenereerd voor het EHDS2-pilotproject Sciensano Use Case"@nl;
         dcat:accessURL                <https://www.dummy.com/>;
@@ -357,3 +353,12 @@
 <http://publications.europa.eu/resource/authority/dataset-type/PERSONAL_DATA> a               skos:Concept;
 #                                          skos:inScheme   ;
                                           skos:prefLabel  "Personal Data" .
+
+<internalURI:analyticsRightsStatement> a dct:RightsStatement ;
+        rdfs:label "Rights statement for the analytics distribution" .
+
+<internalURI:dataserviceRightsStatement> a dct:RightsStatement ;
+        rdfs:label "open use" .
+
+<internalURI:sampleRightsStatement> a dct:RightsStatement ;
+        rdfs:label "Free access." .
