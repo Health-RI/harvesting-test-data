@@ -209,9 +209,9 @@
                         dcat:endpointURL <https://query.wikidata.org/sparql> ;
                         dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
                         dct:license     <http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0> ;
-                        dcat:endpointDescription <http://wikidata.org> 
+                        dcat:endpointDescription <http://wikidata.org> ;
                         dcatap:applicableLegislation <http://data.europa.eu/eli/reg/2022/868/oj> ;
-                        dcatap:hvdCategory <https://publications.europa.eu/resource/authority/bna/c_e1da4e07> ;
+                        dcatap:hvdCategory <http://publications.europa.eu/resource/authority/bna/c_e1da4e07> ;
                         dct:modified    "2025-10-16T12:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                         dcat:servesDataset <http://example.healthdata.nl/set/dataset> ;
                 ] ;
@@ -226,7 +226,7 @@
                 ] ;
         dcat:compressFormat             <http://www.iana.org/assignments/media-types/application/gzip> ;
         dcat:packageFormat              <http://www.iana.org/assignments/media-types/text/csv> ;
-        adms:status                     <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
+        adms:status                     <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ;
         dcat:temporalResolution         "P1D"^^<http://www.w3.org/2001/XMLSchema#duration> .
 
 <http://www.iana.org/assignments/media-types/text/csv>
