@@ -229,9 +229,6 @@
         adms:status                     <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ;
         dcat:temporalResolution         "P1D"^^<http://www.w3.org/2001/XMLSchema#duration> .
 
-<http://www.iana.org/assignments/media-types/text/csv>
-        a                               dct:MediaType .
-
 <internalURI:creator0>
         a                               foaf:Agent;
         foaf:homepage                   <https://example.com/homepage> ;
@@ -253,29 +250,6 @@
         vcard:organisationName          "Contact Point" ;
         vcard:organisationUnit          "Health Information" .
 
-<http://piveau.io/set/record/16e16149-bf41-42f6-8741-225e8c97a35e>
-        a                               dcat:CatalogRecord ;
-        dct:creator                     <http://piveau.io> ;
-        dct:identifier                  "16e16149-bf41-42f6-8741-225e8c97a35e" ;
-        dct:issued                      "2024-10-04T14:28:36Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        dct:modified                    "2024-10-09T17:34:28Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        spdx:checksum      
-                [ a     spdx:Checksum ;
-                        spdx:algorithm  spdx:checksumAlgorithm_md5 ;
-                        spdx:checksumValue  "ea77c251b6945e450ae4d66c581495d4" ;
-                ] ;
-        foaf:primaryTopic               <http://piveau.io/set/data/16e16149-bf41-42f6-8741-225e8c97a35e> .
-
-<http://publications.europa.eu/resource/authority/language/FRA>
-        a                               dct:LinguisticSystem .
-
-<internalURI:sampleTable0>
-        a <http://www.w3.org/ns/csvw#Table> ;
-        dct:title                       "ID_TU_STATBEL_POP" ;
-        <http://www.w3.org/ns/csvw#column>
-                <internalURI:variables0> ;
-        dcat:keyword                    "TEST-DATASET" .
-
 <http://example.com/sample>
         a                               dcat:Distribution ;
         dcatap:applicableLegislation    <http://data.europa.eu/eli/reg/2022/868/oj> ;
@@ -294,22 +268,9 @@
         dcat:mediaType                  <http://www.iana.org/assignments/media-types/text/csv> ;
         dcat:byteSize                   1024 . #^^xsd:nonNegativeInteger .
 
-
-<http://publications.europa.eu/resource/authority/language/NLD>
-        a                               dct:LinguisticSystem .
-
-<http://publications.europa.eu/resource/authority/language/ENG>
-        a                               dct:LinguisticSystem .
-
 <http://example.com/publisherType/undefined>
         a                               skos:Concept ;
         skos:prefLabel                  "National Public Health Institute" .
-
-<http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC>
-        a                               dct:RightsStatement .
-
-<http://publications.europa.eu/resource/authority/frequency/DAILY>
-        a                               dct:Frequency .
 
 <internalURI:qualifiedAttribution0>
         a                               prov:Attribution ;
@@ -323,9 +284,6 @@
                         dct:identifier  "123" ;
                 ] .
 
-<http://publications.europa.eu/resource/authority/country/BEL>
-        a                               dct:Location .
-
 <internalURI:hasCodeValues0>
         a                               skos:Concept ;
         dct:identifier                  "https://icd.who.int/browse10/2019/en#/Y59.0"^^<http://www.w3.org/2001/XMLSchema#anyURI> ;
@@ -333,9 +291,6 @@
         skos:hasTopConcept              <http://www.wikidata.org/entity/P494> ;
         skos:notation                   "Y59.0" ;
         skos:prefLabel                  "Viral vaccines" .
-
-<http://publications.europa.eu/resource/authority/file-type/CSV>
-        a                               dct:MediaTypeOrExtent .
 
 <internalURI:wasGeneratedBy0>
         a                               prov:Activity ;
@@ -371,13 +326,6 @@
         skos:hasTopConcept              <http://www.wikidata.org/entity/P494> ;
         skos:notation                   "U07.1" ;
         skos:prefLabel                  "Test 1" .
-
-#<http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0>
-#        a           dct:LicenseDocument;
-#        rdfs:label  "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported" .
-
-<http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> 
-        a                               skos:Concept .
 
 <http://publications.europa.eu/resource/authority/dataset-type/PERSONAL_DATA> 
         a                               skos:Concept;
