@@ -16,6 +16,8 @@
 
 <http://example.healthdata.nl/set/dataset>
         a                               dcat:Resource , dcat:Dataset ;
+        dct:accessRights                <http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC> ;
+        healthdcatap:analytics          <internalURI:analytics> ;
         dcatap:applicableLegislation    <http://data.europa.eu/eli/reg/2022/868/oj> ;
         healthdcatap:analytics          <http://example.com/analytics> ;
         healthdcatap:hasCodeValues      <http://www.wikidata.org/entity/Q12125> ;
@@ -23,8 +25,6 @@
                                         <http://www.wikidata.org/entity/P4229> ;
         healthdcatap:hdab
                 [ a     foaf:Organization ;
-                        foaf:homepage   <https://www.example.com/hdab>;
-                        foaf:mbox       <mailto:hdab@example.com>;
                         foaf:name       "EU Health Data Access Body"@en , 
                                         "EU Health Data Access Body"@nl ;
                 ] ;
@@ -32,8 +32,6 @@
                                         <http://www.wikidata.org/entity/Q30988757> ;
         healthdcatap:healthTheme        <http://www.wikidata.org/entity/Q7907952> , 
                                         <http://www.wikidata.org/entity/Q58624061> ;
-        healthdcatap:maxTypicalAge      "110"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
-        healthdcatap:minTypicalAge      "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
         healthdcatap:numberOfRecords    "123456789"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
         healthdcatap:numberOfUniqueIndividuals "7654321"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
         healthdcatap:populationCoverage "This example includes a very non-descript population"@en , 
