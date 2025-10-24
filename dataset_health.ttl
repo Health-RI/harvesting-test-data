@@ -38,9 +38,6 @@
         healthdcatap:numberOfUniqueIndividuals "7654321"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
         healthdcatap:populationCoverage "This example includes a very non-descript population"@en , 
                                         "Dit voorbeeld bevat een zeer nietszeggende populatie"@nl ;
-        healthdcatap:publisherNote      "Health-RI is the Dutch health care initiative to build an integrated health data infrastructure for research and innovation."@en ,
-                                        "Health-RI is het Nederlandse gezondheidszorginitiatief om een geïntegreerde gezondheidsdatainfrastructuur voor onderzoek en innovatie op te bouwen."@nl ;
-        healthdcatap:publisherType      <http://example.com/publisherType/undefined> ;
         healthdcatap:retentionPeriod
                 [ a     dct:PeriodOfTime ;
                         dcat:endDate    "2024-12-31T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
@@ -62,7 +59,7 @@
                                         <http://publications.europa.eu/resource/authority/language/NLD> ,
                                         <http://publications.europa.eu/resource/authority/language/FRA> ;
         dct:modified                    "2024-12-31T23:59:59Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        dct:provenance                  
+        dct:provenance
                 [ a     dct:ProvenanceStatement ;
                         rdfs:label      "This example dataset is partly sourced from TEHDAS2" ;
                 ] ;
@@ -143,13 +140,26 @@
         dct:title                       "Example dataset series"@en , 
                                         "Voorbeeld dataset serie"@nl .
 
+<internalURI:creator0>
+        a                               foaf:Agent ;
+        dct:spatial                     <http://publications.europa.eu/resource/authority/country/NLD> ;
+        foaf:mbox                       <mailto:info@creator.com> ;
+        dct:identifier                  "https://orcid.org/your_identifier" ;
+        foaf:name                       "Creator"@en, 
+                                        "Maker"@nl ;
+        healthdcatap:publisherNote      "Creator example note" ;
+        healthdcatap:publisherType      <http://purl.org/adms/publishertype/NationalAuthority> ;
+        dct:type                        <http://purl.org/adms/publishertype/NationalAuthority> ;
+        foaf:homepage                   <https://example.com/creator_homepage> .
+
 <internalURI:publisher0> 
         a                               foaf:Agent ;
         dct:spatial                     <http://publications.europa.eu/resource/authority/country/BEL> ;
         foaf:mbox                       <mailto:test@example.com> ;
         dct:identifier                  "test" ;
         foaf:name                       "Test Example" ;
-        healthdcatap:publisherNote      "Example note" ;
+        healthdcatap:publisherNote      "Health-RI is the Dutch health care initiative to build an integrated health data infrastructure for research and innovation."@en ,
+                                        "Health-RI is het Nederlandse gezondheidszorginitiatief om een geïntegreerde gezondheidsdatainfrastructuur voor onderzoek en innovatie op te bouwen."@nl ;
         healthdcatap:publisherType      <http://purl.org/adms/publishertype/NationalAuthority> ;
         dct:type                        <http://purl.org/adms/publishertype/NationalAuthority> ;
         foaf:homepage                   <http://example.com/> .
@@ -173,7 +183,7 @@
                         dcat:startDate  "2020-03-01T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 ] ;
         dcat:downloadURL                <https://fair.healthdata.be/sites/default/files/distribution/d43a158e-7d13-4660-bbc3-9d3f8d5501e5/Technical_report_number_of_unique_study_subjects_available_by_environment_for_project_HDBP0250.csv> ;
-        dcat:byteSize                   1024 ; #^^xsd:nonNegativeInteger ;
+        dcat:byteSize                   "1024"^^xsd:nonNegativeInteger ;
         dcat:mediaType                  <http://www.iana.org/assignments/media-types/text/csv> ;
         dcat:accessService 
                 [ a     dcat:DataService ;
@@ -193,17 +203,7 @@
                                         vcard:hasEmail <mailto:test@example.com> ;
                                         vcard:fn "Test Example" ;
                                 ] ;     
-                        dct:creator 
-                                [ a     foaf:Agent ;
-                                        dct:spatial     <http://publications.europa.eu/resource/authority/country/BEL> ;
-                                        foaf:mbox       <mailto:test@example.com> ;
-                                        dct:identifier  "test" ;
-                                        foaf:name       "Test Example" ;
-                                        healthdcatap:publisherNote "Example note" ;
-                                        healthdcatap:publisherType <http://purl.org/adms/publishertype/NationalAuthority> ;
-                                        dct:type        <http://purl.org/adms/publishertype/NationalAuthority> ;
-                                        foaf:homepage   <http://example.com/> ;
-                                ] ;
+                        dct:creator     <internalURI:creator0> ;
                         dct:publisher   <internalURI:publisher0> ;
                         dcat:theme      <http://publications.europa.eu/resource/authority/data-theme/HEAL> ;
                         dcat:endpointURL <https://query.wikidata.org/sparql> ;
@@ -228,14 +228,6 @@
         dcat:packageFormat              <http://www.iana.org/assignments/media-types/text/csv> ;
         adms:status                     <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ;
         dcat:temporalResolution         "P1D"^^<http://www.w3.org/2001/XMLSchema#duration> .
-
-<internalURI:creator0>
-        a                               foaf:Agent;
-        foaf:homepage                   <https://example.com/homepage> ;
-        foaf:mbox                       <mailto:info@example.com> ;
-        foaf:name                       "Contact Point"@en, 
-                                        "Contactpunt"@nl ;
-        dct:identifier                  "example" .
 
 <internalURI:admsIdentifier0>
         a                               adms:Identifier ;
@@ -266,7 +258,7 @@
         dcat:accessURL                  <https://www.dummy.com/> ;
         dcat:downloadURL                <https://github.com/CAVDgit/EHDS2_UC_Sciensano/blob/main/use_case_1_synthetic_data_10K_individuals.csv> ;
         dcat:mediaType                  <http://www.iana.org/assignments/media-types/text/csv> ;
-        dcat:byteSize                   1024 . #^^xsd:nonNegativeInteger .
+        dcat:byteSize                   "1024"^^xsd:nonNegativeInteger .
 
 <http://example.com/publisherType/undefined>
         a                               skos:Concept ;
