@@ -334,7 +334,7 @@
 <internalURI:DISTRIBUTIONnoMETADATA>
         dct:identifier                  "http://ehelse.healthdataportal.eu/analytics/47f55653-a151-48c1-8d90-940561da6e57" ;
         dct:isPartOf                    <http://example.healthdata.nl/set/dataset> ;
-        dcat:theme                      <http://publications.europa.eu/resource/authority/data-theme/HEAL> ;
+        dcat:theme                      <http://publications.europa.eu/resource/authority/data-theme/HEAL> .
 
 # QualityCertificate
 #                         oa:motivatedBy  dqv:qualityAssessment ;
