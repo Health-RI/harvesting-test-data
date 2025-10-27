@@ -13,7 +13,7 @@
 @prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
 @prefix healthdcatap: <http://healthdataportal.eu/ns/health#> .
 @prefix dpv:    <https://w3id.org/dpv#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.healthdata.nl/set/dataset>
         a                               dcat:Resource , dcat:Dataset ;
@@ -88,7 +88,7 @@
         dcat:theme                      <http://publications.europa.eu/resource/authority/data-theme/HEAL> ;
         dct:title                       "HealthDCAT-AP test dataset"@en , 
                                         "HealthDCAT-AP test dataset"@nl ;
-        dct:type                        <http://publications.europa.eu/resource/authority/dataset-type/PERSONAL_DATA> ;
+        dct:type                        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
         dcat:version                     "1.2.3" ;
         adms:versionNotes               "Dataset continuously updated"@en , 
                                         "Dataset continue bijgewerkt"@nl ;
@@ -115,14 +115,14 @@
 <internalURI:creator0>
         a                               foaf:Agent ;
         dct:spatial                     <http://publications.europa.eu/resource/authority/country/NLD> ;
-        foaf:mbox                       <mailto:info@creator.com> ;
-        dct:identifier                  "https://orcid.org/your_identifier" ;
-        foaf:name                       "Creator"@en, 
-                                        "Maker"@nl ;
+        foaf:mbox                       <mailto:example@creator.com> ;
+        dct:identifier                  "https://orcid.org/creator_id" ;
+        foaf:name                       "Example Creator"@en, 
+                                        "Voorbeeld Maker"@nl ;
         healthdcatap:publisherNote      "Creator example note"@en,
                                         "Maker voorbeeld notitie"@nl ;
         healthdcatap:publisherType      <http://purl.org/adms/publishertype/NationalAuthority> ;
-        dct:type                        <http://purl.org/adms/publishertype/NationalAuthority> ;
+        dct:type                        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
         foaf:homepage                   <https://example.com/creator_homepage> .
 
 <internalURI:publisher0> 
@@ -130,12 +130,13 @@
         dct:spatial                     <http://publications.europa.eu/resource/authority/country/NLD> ;
         foaf:mbox                       <mailto:example@publisher.com> ;
         dct:identifier                  "https://orcid.org/publisher_id" ;
-        foaf:name                       "Health-RI" ;
+        foaf:name                       "Health-RI Publisher"@en ,
+                                        "Health-RI Uitgever"@nl ;
         healthdcatap:publisherNote      "Health-RI is the Dutch health care initiative to build an integrated health data infrastructure for research and innovation."@en ,
                                         "Health-RI is het Nederlandse gezondheidszorginitiatief om een geïntegreerde gezondheidsdatainfrastructuur voor onderzoek en innovatie op te bouwen."@nl ;
         healthdcatap:publisherType      <http://purl.org/adms/publishertype/NationalAuthority> ;
-        dct:type                        <http://purl.org/adms/publishertype/NationalAuthority> ;
-        foaf:homepage                   <https://www.healthdata.nl> .
+        dct:type                        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
+        foaf:homepage                   <https://example.com/publisher_homepage> .
 
 <internalURI:analytics>
         a                               dcat:Distribution ;
@@ -152,7 +153,7 @@
                         dcat:endpointURL <https://query.wikidata.org/sparql> ;
                         dct:format      <http://example.org/format> ;
                         dcatap:hvdCategory <http://publications.europa.eu/resource/authority/bna/c_e1da4e07> ;
-                        dct:identifier  "service-123" ;
+                        dct:identifier  "https://orcid.org/accessService_id" ;
                         dcat:keyword    "keyword1"@en , 
                                         "trefwoord2"@nl ;
                         dcat:landingPage <http://example.org/landing> ;
@@ -175,7 +176,7 @@
                 ] ;
         dcat:compressFormat             <http://www.iana.org/assignments/media-types/application/gzip> ;
         dct:description                 "Example of analytics description."@en ,
-                                        "Voorbeel van analytics omschrijving"@nl ;
+                                        "Voorbeeld van analytics omschrijving"@nl ;
         foaf:page                       <http://example.com/analytics_documentation> ;
         dcat:downloadURL                <https://fair.healthdata.be/sites/default/files/distribution/d43a158e-7d13-4660-bbc3-9d3f8d5501e5/Technical_report_number_of_unique_study_subjects_available_by_environment_for_project_HDBP0250.csv> ;
         dct:format                      <http://publications.europa.eu/resource/authority/file-type/CSV> ;
@@ -226,7 +227,7 @@
         dcat:accessURL                  <https://www.dummy.com/> ;
         dcat:downloadURL                <https://github.com/CAVDgit/EHDS2_UC_Sciensano/blob/main/use_case_1_synthetic_data_10K_individuals.csv> ;
         dcat:mediaType                  <http://www.iana.org/assignments/media-types/text/csv> ;
-        dcat:byteSize                   "1024"^^xsd:nonNegativeInteger .
+        dcat:byteSize                   "2048"^^xsd:nonNegativeInteger .
 
 <http://example.com/publisherType/undefined>
         a                               skos:Concept ;
@@ -235,29 +236,25 @@
 <internalURI:qualifiedAttribution0>
         a                               prov:Attribution ;
         prov:agent    
-                [ a     foaf:Organization ;
-                        foaf:homepage   <https://healthdata.be> ;
-                        foaf:mbox       <mailto:healthdata@sciensano.be> ;
+                [ a     foaf:Agent ;
+                        dct:spatial     <http://publications.europa.eu/resource/authority/country/NLD> ;
+                        foaf:mbox       <mailto:example@qualifiedAttribution.com> ;
+                        dct:identifier  "https://orcid.org/qualifiedAttribution_id" ;
                         foaf:name       "Organization qualifiedAttribution"@en , 
                                         "Organisatie qualifiedAttribution"@nl ;
-                        dct:identifier  "123" ;
+                        healthdcatap:publisherNote "qualifiedAttribution example note"@en ,
+                                        "qualifiedAttribution voorbeeld notitie"@nl ;
+                        healthdcatap:publisherType <http://purl.org/adms/publishertype/NationalAuthority> ;
+                        dct:type        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
+                        foaf:homepage   <https://example.com/qualifiedAttribution> ;
                 ] ;
         dcat:hadRole                    <https://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor> .
-
-
-<internalURI:hasCodeValues0>
-        a                               skos:Concept ;
-        dct:identifier                  "https://icd.who.int/browse10/2019/en#/Y59.0"^^<http://www.w3.org/2001/XMLSchema#anyURI> ;
-        skos:definition                 "Viral vaccines" ;
-        skos:hasTopConcept              <http://www.wikidata.org/entity/P494> ;
-        skos:notation                   "Y59.0" ;
-        skos:prefLabel                  "Viral vaccines" .
 
 <internalURI:wasGeneratedBy0>
         a                               prov:Activity ;
         rdfs:label                      "http://dbpedia.org/resource/Record_linkage" ; 
         rdfs:seeAlso                    <https://www.ehealth.fgov.be/ehealthplatform/fr/service-codage-anonymisation-et-ttp> ;
-        dct:type                        <http://dbpedia.org/resource/Record_linkage> ;
+        dct:type                        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
         prov:startedAtTime              "2021-01-01T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
         prov:wasAssociatedWith  
                 [ a     prov:Agent ;
@@ -270,28 +267,6 @@
                         foaf:name       "Dr. Joris van Loenhout" ; 
                 ];
         foaf:page                       <https://www.sciensano.be/sites/default/files/information_letter_linkvacc_20221010_en.pdf> .
-
-<internalURI:variables0>
-        a                               <http://www.w3.org/ns/csvw#Column> ;
-        <http://www.w3.org/ns/csvw#datatype>
-                                        <https://string.eu> ;
-        <http://www.w3.org/ns/csvw#describes>
-                                        "Patient death reason\tInformation on wheter the cause of death was COVID-19." ;
-        <http://www.w3.org/ns/csvw#name>
-                                        "CD_COD_COVID" .
-
-<internalURI:hasCodeValues1>
-        a                               skos:Concept ;
-        dct:identifier                  "https://icd.who.int/browse10/2019/en#/U07.1"^^<http://www.w3.org/2001/XMLSchema#anyURI> ;
-        skos:definition                 "COVID-19, virus identified" ;
-        skos:hasTopConcept              <http://www.wikidata.org/entity/P494> ;
-        skos:notation                   "U07.1" ;
-        skos:prefLabel                  "Test 1" .
-
-<http://publications.europa.eu/resource/authority/dataset-type/PERSONAL_DATA> 
-        a                               skos:Concept;
-#                                          skos:inScheme   ;
-        skos:prefLabel                  "Personal Data" .
 
 <internalURI:analyticsRightsStatement> 
         a                               dct:RightsStatement ;
@@ -338,3 +313,34 @@
 
 # QualityCertificate
 #                         oa:motivatedBy  dqv:qualityAssessment ;
+
+# Wat is dit?
+<internalURI:hasCodeValues0>
+        a                               skos:Concept ;
+        dct:identifier                  "https://icd.who.int/browse10/2019/en#/Y59.0"^^<http://www.w3.org/2001/XMLSchema#anyURI> ;
+        skos:definition                 "Viral vaccines" ;
+        skos:hasTopConcept              <http://www.wikidata.org/entity/P494> ;
+        skos:notation                   "Y59.0" ;
+        skos:prefLabel                  "Viral vaccines" .
+
+<internalURI:variables0>
+        a                               <http://www.w3.org/ns/csvw#Column> ;
+        <http://www.w3.org/ns/csvw#datatype>
+                                        <https://string.eu> ;
+        <http://www.w3.org/ns/csvw#describes>
+                                        "Patient death reason\tInformation on wheter the cause of death was COVID-19." ;
+        <http://www.w3.org/ns/csvw#name>
+                                        "CD_COD_COVID" .
+
+<internalURI:hasCodeValues1>
+        a                               skos:Concept ;
+        dct:identifier                  "https://icd.who.int/browse10/2019/en#/U07.1"^^<http://www.w3.org/2001/XMLSchema#anyURI> ;
+        skos:definition                 "COVID-19, virus identified" ;
+        skos:hasTopConcept              <http://www.wikidata.org/entity/P494> ;
+        skos:notation                   "U07.1" ;
+        skos:prefLabel                  "Test 1" .
+
+<http://publications.europa.eu/resource/authority/dataset-type/PERSONAL_DATA> 
+        a                               skos:Concept;
+#                                          skos:inScheme   ;
+        skos:prefLabel                  "Personal Data" .
