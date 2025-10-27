@@ -13,6 +13,7 @@
 @prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
 @prefix healthdcatap: <http://healthdataportal.eu/ns/health#> .
 @prefix dpv:    <https://w3id.org/dpv#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema> .
 
 <http://example.healthdata.nl/set/dataset>
         a                               dcat:Resource , dcat:Dataset ;
