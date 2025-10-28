@@ -18,8 +18,8 @@
 <http://example.healthdata.nl/set/dataset>
         a                               dcat:Resource , dcat:Dataset ;
         dct:accessRights                <http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC> ;
-        healthdcatap:analytics          <internalURI:analytics> ;
-        dcatap:applicableLegislation    <http://data.europa.eu/eli/reg/2022/868/oj> ;
+        healthdcatap:analytics          <internalURI:analytics0> ;
+        dcatap:applicableLegislation    <http://data.europa.eu/eli/reg/2025/327/oj> ;
         healthdcatap:hasCodeValues      <http://www.wikidata.org/entity/Q12125> ;
         healthdcatap:hasCodingSystem    <http://www.wikidata.org/entity/P1690> ,
                                         <http://www.wikidata.org/entity/P4229> ;
@@ -28,10 +28,10 @@
         dct:creator                     <internalURI:creator0> ;
         dct:description                 "This dataset is an example of using HealthDCAT-AP in CKAN"@en ,
                                         "Deze dataset is een voorbeeld van het gebruik van HealthDCAT-AP in CKAN"@nl ;
-        dcat:distribution               <http://example.com/analytics> ;
+        dcat:distribution               <internalURI:distribution0> ;
         foaf:page                       <https://www.sciensano.be/en/projects/linking-registers-covid-19-vaccine-surveillance> ;
         dct:accrualPeriodicity          <http://publications.europa.eu/resource/authority/frequency/DAILY> ;
-        dct:spatial                     <http://publications.europa.eu/resource/authority/country/BEL> ;
+        dct:spatial                     <http://publications.europa.eu/resource/authority/country/NLD> ;
         dcat:hasVersion                 <http://example.com/dataset/1234567890> ;
         healthdcatap:healthTheme        <http://www.wikidata.org/entity/Q7907952> , 
                                         <http://www.wikidata.org/entity/Q58624061> ;
@@ -76,7 +76,7 @@
                         dcat:startDate  "2020-01-01T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                         dcat:endDate    "2030-12-31T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 ] ;
-        adms:sample                     <http://example.com/sample> ;
+        adms:sample                     <internalURI:sample0> ;
         dct:source                      <http://example.com/source_of_data> ;
         adms:status                     <http://publications.europa.eu/resource/authority/dataset-status/DEVELOP> ;
         dct:temporal 
@@ -96,9 +96,10 @@
 
 <http://example.com/series>
         a                               dcat:DatasetSeries ;
-        dcatap:applicableLegislation    <http://data.europa.eu/eli/reg/2022/868/oj> ;
+        dcatap:applicableLegislation    <http://data.europa.eu/eli/reg/2025/327/oj> ;
         dcat:contactPoint               <internalURI:contactPoint0> ;
-        dct:description                 "This is an example dataset series with dummy data" ;
+        dct:description                 "This is an example dataset series with dummy data"@en ,
+                                        "Dit is een voorbeeld dataset series met dummy data"@nl ;
         dct:accrualPeriodicity          <http://publications.europa.eu/resource/authority/frequency/DAILY> ;
         dct:spatial                     <http://publications.europa.eu/resource/authority/country/NLD> ;
         dct:modified                    "2025-09-10T15:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
@@ -117,9 +118,9 @@
         dct:spatial                     <http://publications.europa.eu/resource/authority/country/NLD> ;
         foaf:mbox                       <mailto:example@creator.com> ;
         dct:identifier                  "https://orcid.org/creator_id" ;
-        foaf:name                       "Example Creator"@en, 
+        foaf:name                       "Example Creator"@en , 
                                         "Voorbeeld Maker"@nl ;
-        healthdcatap:publisherNote      "Creator example note"@en,
+        healthdcatap:publisherNote      "Creator example note"@en ,
                                         "Maker voorbeeld notitie"@nl ;
         healthdcatap:publisherType      <http://purl.org/adms/publishertype/NationalAuthority> ;
         dct:type                        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
@@ -138,17 +139,18 @@
         dct:type                        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
         foaf:homepage                   <https://example.com/publisher_homepage> .
 
-<internalURI:analytics>
+<internalURI:distribution0>
         a                               dcat:Distribution ;
         dcat:accessService 
                 [ a     dcat:DataService ;
                         dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
-                        dcatap:applicableLegislation <http://data.europa.eu/eli/reg/2022/868/oj> ;
-                        dct:conformsTo  <http://example.org/spec> ;
+                        dcatap:applicableLegislation <http://data.europa.eu/eli/reg/2025/327/oj> ;
+                        dct:conformsTo  <http://example.org/DistributionConformsTo> ;
                         dcat:contactPoint <internalURI:contactPoint0> ;
                         dct:creator     <internalURI:creator0> ;
-                        dct:rights      <internalURI:dataserviceRightsStatement> ;
-                        dct:description "This is an example data service" ;
+                        dct:rights      <internalURI:dataserviceRightsStatement0> ;
+                        dct:description "This is an example dataservice"@en ,
+                                        "Dit is een voorbeeld dataservice"@nl ;
                         dcat:endpointDescription <http://wikidata.org> ;
                         dcat:endpointURL <https://query.wikidata.org/sparql> ;
                         dct:format      <http://example.org/format> ;
@@ -164,10 +166,11 @@
                         dct:publisher   <internalURI:publisher0> ;
                         dcat:servesDataset <http://example.healthdata.nl/set/dataset> ;
                         dcat:theme      <http://publications.europa.eu/resource/authority/data-theme/HEAL> ;
-                        dct:title       "Example data service" ;
+                        dct:title       "Example dataservice"@en ,
+                                        "Voorbeeld dataservice"@nl ;
                 ] ;
         dcat:accessURL                  <https://www.example.com/analytics> ;
-        dcatap:applicableLegislation    <http://data.europa.eu/eli/reg/2022/868/oj> ;
+        dcatap:applicableLegislation    <http://data.europa.eu/eli/reg/2025/327/oj> ;
         dcat:byteSize                   "1024"^^xsd:nonNegativeInteger ;
         spdx:checksum 
                 [ a     spdx:Checksum ;
@@ -175,8 +178,8 @@
                         spdx:checksumValue "a0f2a3c1dcd5b1cac71bf0c03f2ff1bd" ; 
                 ] ;
         dcat:compressFormat             <http://www.iana.org/assignments/media-types/application/gzip> ;
-        dct:description                 "Example of analytics description."@en ,
-                                        "Voorbeeld van analytics omschrijving"@nl ;
+        dct:description                 "Example of distribution description."@en ,
+                                        "Voorbeeld van distributie omschrijving"@nl ;
         foaf:page                       <http://example.com/analytics_documentation> ;
         dcat:downloadURL                <https://fair.healthdata.be/sites/default/files/distribution/d43a158e-7d13-4660-bbc3-9d3f8d5501e5/Technical_report_number_of_unique_study_subjects_available_by_environment_for_project_HDBP0250.csv> ;
         dct:format                      <http://publications.europa.eu/resource/authority/file-type/CSV> ;
@@ -192,11 +195,31 @@
                         dcat:startDate  "2021-01-01T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                         dcat:endDate    "2031-12-31T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
                 ] ;
-        dct:rights                      <internalURI:analyticsRightsStatement> ;
+        dct:rights                      <internalURI:distributionRightsStatement0> ;
         adms:status                     <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ;
         dcat:temporalResolution         "P1D"^^<http://www.w3.org/2001/XMLSchema#duration> ;
         dct:title                       "Technical report number of unique study subjects available by environment for project HDBP0250"@en ,
                                         "Technisch rapport aantal unieke studiepersonen beschikbaar per omgeving voor project HDBP0250"@nl .
+
+<internalURI:analytics0>
+        a                               dcat:Distribution ;
+        dcat:accessURL                  <https://www.example.com/analytics> ;
+        dcat:byteSize                   "2048"^^xsd:nonNegativeInteger ;
+        dct:format                      <http://publications.europa.eu/resource/authority/file-type/TXT> ;
+        dct:license                     <http://publications.europa.eu/resource/authority/licence/SLEEPYCAT> ;
+        dct:rights                      <internalURI:analyticsRightsStatement0> ; 
+        dct:title                       "Analytics title"@en ,
+                                        "Analytiek titel"@nl .
+
+<internalURI:sample0>
+        a                               dcat:Distribution ;
+        dcat:accessURL                  <https://www.example.com/sample> ;
+        dcat:byteSize                   "4096"^^xsd:nonNegativeInteger .
+        dct:format                      <http://publications.europa.eu/resource/authority/file-type/XLSX> ;
+        dct:license                     <http://publications.europa.eu/resource/authority/licence/GPL_2_0_OR_LATER> ;
+        dct:rights                      <internalURI:sampleRightsStatement0> ;
+        dct:title                       "Sample title"@en ,
+                                        "Monster titel"@nl .
 
 <internalURI:admsIdentifier0>
         a                               adms:Identifier ;
@@ -205,33 +228,10 @@
 
 <internalURI:contactPoint0>
         a                               vcard:Organization , vcard:Kind ;
-        vcard:fn                        "Contact Point" ;
+        vcard:fn                        "Contact Point"@en ,
+                                        "Contactpunt"@nl ;
         vcard:hasEmail                  <mailto:contact@example.com> ;
-        vcard:hasURL                    <https://healthdata.nl> ;
-        vcard:organisationName          "Contact Point" ;
-        vcard:organisationUnit          "Health Information" .
-
-<http://example.com/sample>
-        a                               dcat:Distribution ;
-        dcatap:applicableLegislation    <http://data.europa.eu/eli/reg/2022/868/oj> ;
-        dct:format                      <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-        dct:identifier                  "http://ehelse.healthdataportal.eu/sample/fe921169-4619-4386-8bfe-60ea131dbe96" ;
-        dct:isPartOf                    <http://example.healthdata.nl/set/dataset> ;
-        dct:issued                      "2024-06-03T08:51:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        dct:language                    <http://publications.europa.eu/resource/authority/language/ENG> ;
-        dct:license                     <http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0> ;
-        dct:modified                    "2024-06-04T18:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        dct:rights                      <internalURI:sampleRightsStatement> ;
-        dct:title                       "Proxy data generating for the EHDS2 Pilot project Sciensano Use Case"@en ,
-                                        "Proxygegevens gegenereerd voor het EHDS2-pilotproject Sciensano Use Case"@nl ;
-        dcat:accessURL                  <https://www.dummy.com/> ;
-        dcat:downloadURL                <https://github.com/CAVDgit/EHDS2_UC_Sciensano/blob/main/use_case_1_synthetic_data_10K_individuals.csv> ;
-        dcat:mediaType                  <http://www.iana.org/assignments/media-types/text/csv> ;
-        dcat:byteSize                   "2048"^^xsd:nonNegativeInteger .
-
-<http://example.com/publisherType/undefined>
-        a                               skos:Concept ;
-        skos:prefLabel                  "National Public Health Institute" .
+        vcard:hasURL                    <https://example.com/contactPoint> .
 
 <internalURI:qualifiedAttribution0>
         a                               prov:Attribution ;
@@ -248,7 +248,7 @@
                         dct:type        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
                         foaf:homepage   <https://example.com/qualifiedAttribution> ;
                 ] ;
-        dcat:hadRole                    <https://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor> .
+        dcat:hadRole                    <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact> .
 
 <internalURI:wasGeneratedBy0>
         a                               prov:Activity ;
@@ -260,33 +260,36 @@
                 [ a     prov:Agent ;
                         prov:actedOnBehalfOf  
                                 [ a     prov:Organization , prov:Agent ;
-                                        foaf:name  "Contact Point"@en, "Contactpunt"@nl ;
+                                        foaf:name  "Associated with"@en , "Geassocieerd met"@nl ;
                                 ] ;
                         foaf:homepage   <https://www.sciensano.be/fr/people/joris-van-loenhout> ;
-                        foaf:mbox       <mailto:Joris.VanLoenhout@sciensano.be> ;
-                        foaf:name       "Dr. Joris van Loenhout" ; 
+                        foaf:mbox       <mailto:example@associate.com> ;
+                        foaf:name       "Known associate"@en , "Bekende geassocieerde"@nl ; 
                 ];
         foaf:page                       <https://www.sciensano.be/sites/default/files/information_letter_linkvacc_20221010_en.pdf> .
 
-<internalURI:analyticsRightsStatement> 
+<internalURI:dataserviceRightsStatement0>
         a                               dct:RightsStatement ;
-        rdfs:label                      "Rights statement for the analytics distribution" .
+        rdfs:label                      "Rights statement for dataservice"@en ,
+                                        "Rechten voor dataservice"@nl .
 
-<internalURI:dataserviceRightsStatement> 
+<internalURI:distributionRightsStatement0> 
         a                               dct:RightsStatement ;
-        rdfs:label                      "Open use" .
+        rdfs:label                      "Rights statement for distribution"@en ,
+                                        "Rechten voor distributie"@nl .
 
-<internalURI:sampleRightsStatement>
+<internalURI:analyticsRightsStatement0> 
         a                               dct:RightsStatement ;
-        rdfs:label                      "Free access." .
+        rdfs:label                      "Open use"@en ,
+                                        "Open gebruik."@nl.
+
+<internalURI:sampleRightsStatement0>
+        a                               dct:RightsStatement ;
+        rdfs:label                      "Free access"@en ,
+                                        "Gratis toegang"@nl .
 
 
 # DATASET
-# NIET IN METADATA, NIET IN API
-<internalURI:DATASETnoMETADATA>
-        dct:alternative                 "TEST-DATASET" ;
-        dct:isPartOf                    <http://example.com/catalog/abcdefghijklmnopqrstuvwxyz> .
-
 # NIET IN METADATA, WEL IN API?
 <internalURI:DATASETyesAPI>
         healthdcatap:hdab
