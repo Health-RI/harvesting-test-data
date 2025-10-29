@@ -214,7 +214,7 @@
 <internalURI:sample0>
         a                               dcat:Distribution ;
         dcat:accessURL                  <https://www.example.com/sample> ;
-        dcat:byteSize                   "4096"^^xsd:nonNegativeInteger .
+        dcat:byteSize                   "4096"^^xsd:nonNegativeInteger ;
         dct:format                      <http://publications.europa.eu/resource/authority/file-type/XLSX> ;
         dct:license                     <http://publications.europa.eu/resource/authority/licence/GPL_2_0_OR_LATER> ;
         dct:rights                      <internalURI:sampleRightsStatement0> ;
@@ -281,7 +281,7 @@
 <internalURI:analyticsRightsStatement0> 
         a                               dct:RightsStatement ;
         rdfs:label                      "Open use"@en ,
-                                        "Open gebruik."@nl.
+                                        "Open gebruik."@nl .
 
 <internalURI:sampleRightsStatement0>
         a                               dct:RightsStatement ;
@@ -316,34 +316,3 @@
 
 # QualityCertificate
 #                         oa:motivatedBy  dqv:qualityAssessment ;
-
-# Wat is dit?
-<internalURI:hasCodeValues0>
-        a                               skos:Concept ;
-        dct:identifier                  "https://icd.who.int/browse10/2019/en#/Y59.0"^^<http://www.w3.org/2001/XMLSchema#anyURI> ;
-        skos:definition                 "Viral vaccines" ;
-        skos:hasTopConcept              <http://www.wikidata.org/entity/P494> ;
-        skos:notation                   "Y59.0" ;
-        skos:prefLabel                  "Viral vaccines" .
-
-<internalURI:variables0>
-        a                               <http://www.w3.org/ns/csvw#Column> ;
-        <http://www.w3.org/ns/csvw#datatype>
-                                        <https://string.eu> ;
-        <http://www.w3.org/ns/csvw#describes>
-                                        "Patient death reason\tInformation on wheter the cause of death was COVID-19." ;
-        <http://www.w3.org/ns/csvw#name>
-                                        "CD_COD_COVID" .
-
-<internalURI:hasCodeValues1>
-        a                               skos:Concept ;
-        dct:identifier                  "https://icd.who.int/browse10/2019/en#/U07.1"^^<http://www.w3.org/2001/XMLSchema#anyURI> ;
-        skos:definition                 "COVID-19, virus identified" ;
-        skos:hasTopConcept              <http://www.wikidata.org/entity/P494> ;
-        skos:notation                   "U07.1" ;
-        skos:prefLabel                  "Test 1" .
-
-<http://publications.europa.eu/resource/authority/dataset-type/PERSONAL_DATA> 
-        a                               skos:Concept;
-#                                          skos:inScheme   ;
-        skos:prefLabel                  "Personal Data" .
