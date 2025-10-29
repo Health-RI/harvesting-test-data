@@ -52,9 +52,9 @@
         healthdcatap:numberOfRecords    "123456789"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
         healthdcatap:numberOfUniqueIndividuals "7654321"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
         adms:identifier                 <internalURI:admsIdentifier0> ;
-        dpv:hasPersonalData             <https://w3id.org/dpv/dpv-pd#Age>,
-                                        <https://w3id.org/dpv/dpv-pd#Gender>,
-                                        <https://w3id.org/dpv/dpv-pd#HealthRecord> ;
+        dpv:hasPersonalData             <https://w3id.org/dpv/pd#Age>,
+                                        <https://w3id.org/dpv/pd#Gender>,
+                                        <https://w3id.org/dpv/pd#HealthRecord> ;
         healthdcatap:populationCoverage "This example includes a very non-descript population"@en , 
                                         "Dit voorbeeld bevat een zeer nietszeggende populatie"@nl ;
         dct:publisher                   <internalURI:publisher0> ;
