@@ -299,7 +299,7 @@
                         foaf:name       "EU Health Data Access Body"@en , 
                                         "EU Health Data Access Body"@nl ;
                 ] ;
-        healthdcatap:healthCategory     <https://www.wikidata.org/entity/Q864217> , 
+        healthdcatap:healthCategory     <http://www.wikidata.org/entity/Q864217> ,
                                         <http://www.wikidata.org/entity/Q30988757> ;
         dct:provenance
                 [ a     dct:ProvenanceStatement ;
