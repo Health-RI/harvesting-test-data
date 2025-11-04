@@ -281,7 +281,7 @@
 <internalURI:analyticsRightsStatement0> 
         a                               dct:RightsStatement ;
         rdfs:label                      "Open use"@en ,
-                                        "Open gebruik."@nl .
+                                        "Open gebruik"@nl .
 
 <internalURI:sampleRightsStatement0>
         a                               dct:RightsStatement ;
