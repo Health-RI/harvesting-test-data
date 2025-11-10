@@ -92,7 +92,14 @@
         dcat:version                     "1.2.3" ;
         adms:versionNotes               "Dataset continuously updated"@en , 
                                         "Dataset continue bijgewerkt"@nl ;
-        prov:wasGeneratedBy             <internalURI:wasGeneratedBy0> .
+        prov:wasGeneratedBy             <internalURI:wasGeneratedBy0> ;
+        healthdcatap:hdab
+                [ a     foaf:Organization ;
+                        foaf:homepage   <https://www.example.com/hdab>;
+                        foaf:mbox       <mailto:hdab@example.com>;
+                        foaf:name       "Test Health Data Access Body"@en ,
+                                        "Test Health Data Access Body"@nl ;
+                ] .
 
 <http://example.com/series>
         a                               dcat:DatasetSeries ;
