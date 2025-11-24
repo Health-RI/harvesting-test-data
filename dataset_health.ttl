@@ -49,8 +49,8 @@
         healthdcatap:maxTypicalAge      "110"^^xsd:nonNegativeInteger ;
         healthdcatap:minTypicalAge      "0"^^xsd:nonNegativeInteger ;
         dct:modified                    "2024-12-31T23:59:59Z"^^xsd:dateTime ;
-        healthdcatap:numberOfRecords    "123456789"^^xsd:nonNegativeInteger ;
-        healthdcatap:numberOfUniqueIndividuals "7654321"^^xsd:nonNegativeInteger ;
+        healthdcatap:numberOfRecords    "123"^^xsd:nonNegativeInteger ;
+        healthdcatap:numberOfUniqueIndividuals "1234"^^xsd:nonNegativeInteger ;
         adms:identifier                 <internalURI:admsIdentifier0> ;
         dpv:hasPersonalData             <https://w3id.org/dpv/pd#Age>,
                                         <https://w3id.org/dpv/pd#Gender>,
