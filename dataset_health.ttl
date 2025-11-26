@@ -120,8 +120,7 @@
         dct:identifier                  "https://orcid.org/creator_id" ;
         foaf:name                       "Example Creator"@en , 
                                         "Voorbeeld Maker"@nl ;
-        healthdcatap:publisherNote      "Creator example note"@en ,
-                                        "Maker voorbeeld notitie"@nl ;
+        healthdcatap:publisherNote      "Creator example note" ;
         healthdcatap:publisherType      <http://purl.org/adms/publishertype/NationalAuthority> ;
         dct:type                        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
         foaf:homepage                   <https://example.com/creator_homepage> .
@@ -133,8 +132,7 @@
         dct:identifier                  "https://orcid.org/publisher_id" ;
         foaf:name                       "Health-RI Publisher"@en ,
                                         "Health-RI Uitgever"@nl ;
-        healthdcatap:publisherNote      "Health-RI is the Dutch health care initiative to build an integrated health data infrastructure for research and innovation."@en ,
-                                        "Health-RI is het Nederlandse gezondheidszorginitiatief om een geïntegreerde gezondheidsdatainfrastructuur voor onderzoek en innovatie op te bouwen."@nl ;
+        healthdcatap:publisherNote      "Health-RI is the Dutch health care initiative to build an integrated health data infrastructure for research and innovation." ;
         healthdcatap:publisherType      <http://purl.org/adms/publishertype/NationalAuthority> ;
         dct:type                        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
         foaf:homepage                   <https://example.com/publisher_homepage> .
@@ -228,8 +226,7 @@
 
 <internalURI:contactPoint0>
         a                               vcard:Organization , vcard:Kind ;
-        vcard:fn                        "Contact Point"@en ,
-                                        "Contactpunt"@nl ;
+        vcard:fn                        "Contact Point" ;
         vcard:hasEmail                  <mailto:contact@example.com> ;
         vcard:hasURL                    <https://example.com/contactPoint> .
 
@@ -242,8 +239,7 @@
                         dct:identifier  "https://orcid.org/qualifiedAttribution_id" ;
                         foaf:name       "Organization qualifiedAttribution"@en , 
                                         "Organisatie qualifiedAttribution"@nl ;
-                        healthdcatap:publisherNote "qualifiedAttribution example note"@en ,
-                                        "qualifiedAttribution voorbeeld notitie"@nl ;
+                        healthdcatap:publisherNote "qualifiedAttribution example note" ;
                         healthdcatap:publisherType <http://purl.org/adms/publishertype/NationalAuthority> ;
                         dct:type        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
                         foaf:homepage   <https://example.com/qualifiedAttribution> ;
@@ -306,13 +302,6 @@
                         rdfs:label      "This example dataset is partly sourced from TEHDAS2" ;
                 ] ;
         dcat:spatialResolutionInMeters  "10"^^xsd:decimal .
-
-# DISTRIBUTION
-# NIET IN METADATA, NIET IN API
-<internalURI:DISTRIBUTIONnoMETADATA>
-        dct:identifier                  "http://ehelse.healthdataportal.eu/analytics/47f55653-a151-48c1-8d90-940561da6e57" ;
-        dct:isPartOf                    <http://example.healthdata.nl/set/dataset> ;
-        dcat:theme                      <http://publications.europa.eu/resource/authority/data-theme/HEAL> .
 
 # QualityCertificate
 #                         oa:motivatedBy  dqv:qualityAssessment ;
