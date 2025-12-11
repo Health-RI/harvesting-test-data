@@ -146,7 +146,7 @@
                         dct:conformsTo  <http://example.org/DistributionConformsTo> ;
                         dcat:contactPoint <internalURI:contactPoint0> ;
                         dct:creator     <internalURI:creator0> ;
-                        dct:rights      <internalURI:dataserviceRightsStatement0> ;
+                        dct:rights      <http://www.example.com/rights_statement_for_access_service> ;
                         dct:description "This is an example dataservice"@en ,
                                         "Dit is een voorbeeld dataservice"@nl ;
                         dcat:endpointDescription <http://wikidata.org> ;
@@ -193,7 +193,7 @@
                         dcat:startDate  "2021-01-01T00:00:00Z"^^xsd:dateTime ;
                         dcat:endDate    "2031-12-31T00:00:00Z"^^xsd:dateTime ;
                 ] ;
-        dct:rights                      <internalURI:distributionRightsStatement0> ;
+        dct:rights                      <http://www.example.com/rights_statement_for_distribution> ;
         adms:status                     <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ;
         dcat:temporalResolution         "P1D"^^xsd:duration ;
         dct:title                       "Technical report number of unique study subjects available by environment for project HDBP0250"@en ,
@@ -205,7 +205,7 @@
         dcat:byteSize                   "2048"^^xsd:nonNegativeInteger ;
         dct:format                      <http://publications.europa.eu/resource/authority/file-type/TXT> ;
         dct:license                     <http://publications.europa.eu/resource/authority/licence/SLEEPYCAT> ;
-        dct:rights                      <internalURI:analyticsRightsStatement0> ; 
+        dct:rights                      <https://www.example.com/rights_statement_for_analytics> ; 
         dct:title                       "Analytics title"@en ,
                                         "Analytiek titel"@nl .
 
@@ -215,7 +215,7 @@
         dcat:byteSize                   "4096"^^xsd:nonNegativeInteger ;
         dct:format                      <http://publications.europa.eu/resource/authority/file-type/XLSX> ;
         dct:license                     <http://publications.europa.eu/resource/authority/licence/GPL_2_0_OR_LATER> ;
-        dct:rights                      <internalURI:sampleRightsStatement0> ;
+        dct:rights                      <https://www.example.com/rights_statement_for_sample> ;
         dct:title                       "Sample title"@en ,
                                         "Monster titel"@nl .
 
@@ -263,45 +263,3 @@
                         foaf:name       "Known associate"@en , "Bekende geassocieerde"@nl ; 
                 ];
         foaf:page                       <https://www.sciensano.be/sites/default/files/information_letter_linkvacc_20221010_en.pdf> .
-
-<internalURI:dataserviceRightsStatement0>
-        a                               dct:RightsStatement ;
-        rdfs:label                      "Rights statement for dataservice"@en ,
-                                        "Rechten voor dataservice"@nl .
-
-<internalURI:distributionRightsStatement0> 
-        a                               dct:RightsStatement ;
-        rdfs:label                      "Rights statement for distribution"@en ,
-                                        "Rechten voor distributie"@nl .
-
-<internalURI:analyticsRightsStatement0> 
-        a                               dct:RightsStatement ;
-        rdfs:label                      "Open use"@en ,
-                                        "Open gebruik"@nl .
-
-<internalURI:sampleRightsStatement0>
-        a                               dct:RightsStatement ;
-        rdfs:label                      "Free access"@en ,
-                                        "Gratis toegang"@nl .
-
-
-# DATASET
-# NIET IN METADATA, WEL IN API?
-<internalURI:DATASETyesAPI>
-        healthdcatap:hdab
-                [ a     foaf:Organization ;
-                        foaf:homepage   <https://www.example.com/hdab>;
-                        foaf:mbox       <mailto:hdab@example.com>;
-                        foaf:name       "EU Health Data Access Body"@en , 
-                                        "EU Health Data Access Body"@nl ;
-                ] ;
-        healthdcatap:healthCategory     <http://www.wikidata.org/entity/Q864217> ,
-                                        <http://www.wikidata.org/entity/Q30988757> ;
-        dct:provenance
-                [ a     dct:ProvenanceStatement ;
-                        rdfs:label      "This example dataset is partly sourced from TEHDAS2" ;
-                ] ;
-        dcat:spatialResolutionInMeters  "10"^^xsd:decimal .
-
-# QualityCertificate
-#                         oa:motivatedBy  dqv:qualityAssessment ;
