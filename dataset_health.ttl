@@ -90,8 +90,8 @@
                                         "HealthDCAT-AP test dataset"@nl ;
         dct:type                        <http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA> ;
         dcat:version                     "1.2.3" ;
-        adms:versionNotes               "Dataset continuously updated"@en , 
-                                        "Dataset continue bijgewerkt"@nl ;
+        adms:versionNotes               "Ten persons added to the dataset, compared to the 1224 persons in version 1.2.2"@en , 
+                                        "Tien personen toegevoegd aan de dataset, in vergelijking tot de 1224 personen in versie 1.2.2."@nl ;
         prov:wasGeneratedBy             <internalURI:wasGeneratedBy0> .
 
 <http://example.com/series>
@@ -151,7 +151,7 @@
                                         "Dit is een voorbeeld dataservice"@nl ;
                         dcat:endpointDescription <http://wikidata.org> ;
                         dcat:endpointURL <https://query.wikidata.org/sparql> ;
-                        dct:format      <http://example.org/format> ;
+                        dct:format      <http://publications.europa.eu/resource/authority/file-type/DOCX> ;
                         dcatap:hvdCategory <http://publications.europa.eu/resource/authority/bna/c_e1da4e07> ;
                         dct:identifier  "https://orcid.org/accessService_id" ;
                         dcat:keyword    "keyword1"@en , 
