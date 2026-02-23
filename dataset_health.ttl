@@ -175,7 +175,7 @@
                         spdx:algorithm  spdx:checksumAlgorithm_md5 ;
                         spdx:checksumValue "a0f2a3c1dcd5b1cac71bf0c03f2ff1bd" ; 
                 ] ;
-        dcat:compressFormat             <http://www.iana.org/assignments/media-types/application/gzip> ;
+        dcat:compressFormat             <https://www.iana.org/assignments/media-types/application/gzip> ;
         dct:description                 "Example of distribution description."@en ,
                                         "Voorbeeld van distributie omschrijving"@nl ;
         foaf:page                       <http://example.com/analytics_documentation> ;
@@ -184,9 +184,9 @@
         dct:language                    <http://publications.europa.eu/resource/authority/language/ENG> ;
         dct:license                     <http://publications.europa.eu/resource/authority/licence/CC_BYNCND_3_0> ;
         dct:conformsTo                  <http://example.org/spec> ;
-        dcat:mediaType                  <http://www.iana.org/assignments/media-types/text/csv> ;
+        dcat:mediaType                  <https://www.iana.org/assignments/media-types/text/csv> ;
         dct:modified                    "2024-06-04T18:00:00Z"^^xsd:dateTime ;
-        dcat:packageFormat              <http://www.iana.org/assignments/media-types/text/csv> ;
+        dcat:packageFormat              <https://www.iana.org/assignments/media-types/application/zip> ;
         dct:issued                      "2024-06-03T08:51:00Z"^^xsd:dateTime ;
         healthdcatap:retentionPeriod
                 [ a     dct:PeriodOfTime ;
