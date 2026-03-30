@@ -113,7 +113,7 @@
                         dcat:startDate  "2020-01-01T00:00:00Z"^^xsd:dateTime ;
                         dcat:endDate    "2020-12-31T00:00:00Z"^^xsd:dateTime ;
                 ] ;
-        dcat:temporalResolution         "P1C"^^xsd:duration ;
+        dcat:temporalResolution         "P13D"^^xsd:duration ;
         dcat:theme                      <http://publications.europa.eu/resource/authority/data-theme/HEAL> ,
                                         <http://publications.europa.eu/resource/authority/data-theme/TECH> ;
         dct:title                       "Health-RI v2 test dataset (EN)"@en , 
