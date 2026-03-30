@@ -306,7 +306,7 @@
         dcat:theme                      <http://publications.europa.eu/resource/authority/data-theme/SOCI> ,
                                         <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
         dct:title                       "Example dataservice"@en ,
-                                        "Voorbeeld dataservice"@nl ;
+                                        "Voorbeeld dataservice"@nl .
 
 <internalURI:contactPoint0>
         a                               vcard:Kind ;
