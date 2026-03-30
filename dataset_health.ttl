@@ -381,7 +381,7 @@
                         healthdcatap:publisherNote "qualifiedAttribution 1 note" ;
                         healthdcatap:publisherType <http://purl.org/adms/publishertype/Academia-ScientificOrganisation> ;
                         dct:type        <http://purl.org/adms/publishertype/NonGovernmentalOrganisation> ;
-                        foaf:homepage   <https://www.example.com/qualifiedAttribution_1_homepage> .
+                        foaf:homepage   <https://www.example.com/qualifiedAttribution_1_homepage> ;
                 ] ;
         dcat:hadRole                    <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact> .
 
@@ -399,7 +399,7 @@
                         healthdcatap:publisherNote "qualifiedAttribution 2 note" ;
                         healthdcatap:publisherType <http://purl.org/adms/publishertype/RegionalAuthority> ;
                         dct:type        <http://purl.org/adms/publishertype/SupraNationalAuthority> ;
-                        foaf:homepage   <https://www.example.com/qualifiedAttribution_2_homepage> .
+                        foaf:homepage   <https://www.example.com/qualifiedAttribution_2_homepage> ;
                 ] ;
         dcat:hadRole                    <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author> .
 
