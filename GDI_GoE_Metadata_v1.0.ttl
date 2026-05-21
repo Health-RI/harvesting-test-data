@@ -1,0 +1,299 @@
+@prefix access: <http://publications.europa.eu/resource/authority/access-right/>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix availability: <http://publications.europa.eu/resource/authority/planned-availability/>.
+@prefix cc: <http://creativecommons.org/ns#>.
+@prefix cv: <http://data.europa.eu/m8g/>.
+@prefix corp: <http://publications.europa.eu/resource/authority/corporate-body/>.
+@prefix country: <http://publications.europa.eu/resource/authority/country/>.
+@prefix csvw: <http://www.w3.org/ns/csvw#>.
+@prefix dataset-type: <http://publications.europa.eu/resource/authority/dataset-type/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dcatap: <http://data.europa.eu/r5r/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dpv: <https://w3id.org/dpv#>.
+@prefix dpv-pd: <https://w3id.org/dpv/dpv-pd#>.
+@prefix dqv: <http://www.w3.org/ns/dqv#>.
+@prefix eli: <http://data.europa.eu/eli/ontology#>.
+@prefix ex: <http://example.com/>.
+@prefix file: <http://publications.europa.eu/resource/authority/file-type/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix frequency: <http://publications.europa.eu/resource/authority/frequency/>.
+@prefix geodcatap: <http://data.europa.eu/930/>.
+@prefix healthdcatap: <http://healthdataportal.eu/ns/health#>.
+@prefix health-activity: <http://13.81.34.152:1101/resource/authority/health-activity/>.
+@prefix health-cat: <http://13.81.34.152:1101/resource/authority/healthcategories/>.
+@prefix health-theme: <http://13.81.34.152:1101/resource/authority/health-theme/>.
+@prefix iana: <https://www.iana.org/assignments/media-types/>.
+@prefix lang: <http://publications.europa.eu/resource/authority/language/>.
+@prefix lcon: <http://www.w3.org/ns/locn#>.
+@prefix oa: <http://www.w3.org/ns/oa#>.
+@prefix odrl: <http://www.w3.org/ns/odrl/2/>.
+@prefix org: <http://www.w3.org/ns/org#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix schema: <http://schema.org/>.
+@prefix senias: <http://senias.de/ns/sis#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix spdx: <http://spdx.org/rdf/terms#>.
+@prefix stat: <http://data.europa.eu/s1n/>.
+@prefix theme: <http://publications.europa.eu/resource/authority/data-theme/>.
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix wiki: <https://www.wikidata.org/wiki/>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+health-theme:HEALTH_PRODUCTS a skos:Concept.
+health-cat:HGPD a skos:Concept.
+health-cat:HPML a skos:Concept.
+access:PUBLIC a dct:RightsStatement.
+country:DNK a dct:Location.
+lang:ENG a dct:LinguisticSystem.
+theme:HEAL a skos:Concept.
+dataset-type:HVD a skos:Concept.
+dpv-pd:Age a dpv:PersonalData.
+dpv-pd:AgeRange a dpv:PersonalData.
+dpv-pd:DNACode a dpv:PersonalData.
+dpv-pd:Gender a dpv:PersonalData.
+dpv-pd:Genetic a dpv:PersonalData.
+dpv-pd:OfficialID a dpv:PersonalData.
+<http://publications.europa.eu/resource/authority/distribution-status/DEVELOP> a skos:Concept.
+<http://data.europa.eu/eli/reg/2025/327/oj> a eli:LegalResource.
+<https://www.retsinformation.dk/eli/lta/2018/728> a eli:LegalResource.
+_:b0_b0 
+    a dcat:Dataset;
+    healthdcatap:healthCategory health-cat:HGPD, health-cat:HPML;
+    healthdcatap:healthTheme health-theme:HEALTH_PRODUCTS;
+    healthdcatap:numberOfRecords "1500"^^xsd:nonNegativeInteger;
+    healthdcatap:numberOfUniqueIndividuals "1414"^^xsd:nonNegativeInteger;
+    healthdcatap:populationCoverage "The National Genome Database of the Danish National Genome Center comprises data from 5 generic and 17 specialised patient groups (mutually exclusive), containing patients of all ages. \nFor patient groups covering only patients under 18 years of age, genomic analyses were also performed on at least one, and often two, adult family members (duo or trio analyses).\nThe generic groups are: Rare diseases, Complex diseases, Fetal medicine, Cancer and Other.\nThe specialized groups are: Hereditary heart diseases, Hereditary haematological diseases, Hereditary cholestatic and fibrotic liver diseases, Audio genetics, Endocrinological patients, Fetal medicine, Neurogenetic patients, Kidney failure, Ophthalmology, Primary immune deficiency, Psychiatry (children and young people), Severe hereditary skin diseases, Rare diseases in children and young people under 18 years, Rare diseases in adults, Cancer: Children and young people, Cancer: Haematological cancer, Cancer: Young adults (18-30 years) and adults with hereditary cancer, Cancer: Advanced and incurable cancer."@en;
+    dct:accessRights access:PUBLIC;
+    dct:language lang:ENG;
+    dct:spatial country:DNK;
+    dct:type dataset-type:HVD;
+    dct:creator "Danish National Genome Center"@en;
+    dcat:theme theme:HEAL;
+    dct:identifier "danish-national-genome-database-goe-public-v1.0"^^xsd:anyURI;
+    dct:title "Genome of Europe Open Dataset from Danish National Genome Database"@en;
+    dct:description "A subset of 1414 healthy patients from the Danish National Genomic Database. The Danish National Genomic Database consists of 38,000+ patients treated in the Danish healthcare system from 2019- (ongoing). Data includes raw sequencing data (FASTQ for all patients; CRAM and VCF files for most)"@en;
+    dcat:keyword "genome"@en, "genomics"@en, "whole genome sequencing"@en;
+    dct:temporal _:b0_b1;
+    dct:publisher _:b0_b2;
+    dcat:contactPoint _:b0_b4;
+    dcat:distribution _:b0_b5;
+    adms:sample _:b0_b6.
+_:b0_b1 a dct:PeriodOfTime;
+    dcat:startDate "2019-07-01"^^xsd:date.
+_:b0_b2 
+    a foaf:Agent;
+    dct:type <http://13.81.34.152:1101/resource/authority/publisher-type/gov-public-sector-org>;
+    cv:contactPoint _:b0_b3;
+    foaf:name "Danish National Genome Center"@en.
+_:b0_b3 
+    a cv:ContactPoint;
+    cv:contactPage <https://www.eng.ngc.dk/>;
+    cv:email "kontakt@ngc.dk".
+_:b0_b4 a vcard:Kind;
+    vcard:hasURL <https://www.eng.ngc.dk/>.
+
+_:b0_b5
+    a dcat:Distribution;
+    dct:language lang:ENG;
+    dct:title "Genome of Europe Open Dataset from Danish National Genome Database for Researchers"@en;
+    dct:description "A distribution of a public dataset for Genome of Europe, based on data from the Danish National Genome Database.\nThe dataset identifies the variants, populations and allele frequencies."@en;
+    dcatap:applicableLegislation <http://data.europa.eu/eli/reg/2025/327/oj>, <https://www.retsinformation.dk/eli/lta/2018/728>;
+    adms:status <http://publications.europa.eu/resource/authority/distribution-status/DEVELOP>;
+    dcat:accessURL <https://www.api.ngc.dk/gdi/beacon>;
+    dcat:downloadURL _:b0_b7.
+_:b0_b6 a csvw:TableGroup;
+    csvw:table _:b0_b7, _:b0_b11, _:b0_b19.
+
+_:b0_b7 
+    a csvw:Table;
+    csvw:name "population";
+    dct:description "Population groups defined by sex and birthyear"@en;
+    dcat:keyword "population"@en, "population group"@en, "birthyear"@en, "age"@en, "sex"@en;
+    csvw:PrimaryKey _:b0_b8;
+    csvw:column _:b0_b8, _:b0_b9, _:b0_b10;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b8
+    a csvw:Column;
+    csvw:name "id";
+    dct:description "Identificator (UUID) of a single population group, defining age and sex. Empty values indicate this as a overall grouping transcending sex or specific age range."@en;
+    csvw:datatype "string";
+    csvw:length "36"^^xsd:nonNegativeInteger;
+    healthdcatap:hasCodingSystem [a dct:Standard; healthdcatap:hasCodingSystem <https://datatracker.ietf.org/doc/html/rfc4122>];
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b9
+    a csvw:Column;
+    csvw:name "birthyear";
+    dct:description "Birthyear (YYYY, ex 1995), originally inferred by the structural rules of the CPR"@en;
+    csvw:datatype "integer";
+    csvw:length "4"^^xsd:nonNegativeInteger;
+    healthdcatap:hasCodingSystem [a dct:Standard; healthdcatap:hasCodingSystem <https://www.cpr.dk/cpr-systemet/opbygning-af-cpr-nummeret>];
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b10
+    a csvw:Column;
+    csvw:name "sex";
+    dct:description "Sex (female, male), originally inferred by the structural rules of the CPR."@en;
+    csvw:datatype "string";
+    csvw:length "6"^^xsd:nonNegativeInteger;
+    healthdcatap:hasCodingSystem [a dct:Standard; healthdcatap:hasCodingSystem <https://www.cpr.dk/cpr-systemet/opbygning-af-cpr-nummeret>];
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+
+_:b0_b11
+    a csvw:Table;
+    csvw:name "variant";
+    dct:description "Defining unique variants by chromosome, position and varant types"@en;
+    dcat:keyword "variant"@en, "chromosome"@en, "position"@en;
+    csvw:PrimaryKey _:b0_b12;
+    csvw:column _:b0_b12, _:b0_b13, _:b0_b14, _:b0_b15, _:b0_b16, _:b0_b17, _:b0_b18;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b12
+    a csvw:Column;
+    csvw:name "id";
+    dct:description "Identificator (UUID) of a single variant, defining chromosome, vaiant position, reference allele, alternate allele, variant type and rsid."@en;
+    csvw:datatype "string";
+    csvw:length "36"^^xsd:nonNegativeInteger;
+    healthdcatap:hasCodingSystem [a dct:Standard; healthdcatap:hasCodingSystem <https://datatracker.ietf.org/doc/html/rfc4122>];
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b13 
+    a csvw:Column;
+    csvw:name "chromosome";
+    dct:description "Chromosome label (e.g., chr1,chr22, chrX, chrY, chrMT)."@en;
+    csvw:datatype "string";
+    csvw:length "5"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b14
+    a csvw:Column;
+    csvw:name "variant_position";
+    dct:description "1-based coordinate on the declared reference genome assembly."@en;
+    csvw:datatype "integer";
+    csvw:length "10"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b15
+    a csvw:Column;
+    csvw:name "reference_allele";
+    dct:description "Reference allele."@en;
+    csvw:datatype "string";
+    csvw:length "128"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b16
+    a csvw:Column;
+    csvw:name "alternate_allele";
+    dct:description "Alternate allele."@en;
+    csvw:datatype "string";
+    csvw:length "128"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b17
+    a csvw:Column;
+    csvw:name "rsid";
+    dct:description "External unique, stable identifier assigned by the dbSNP database, if available. "@en;
+    csvw:datatype "string";
+    csvw:length "50"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b18
+    a csvw:Column;
+    csvw:name "variant_type";
+    dct:description "Identifies variant alterations as insertion/deletions, translocations or inversions."@en;
+    csvw:datatype "string";
+    csvw:length "20"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+
+_:b0_b19
+    a csvw:Table;
+    csvw:name "frequency";
+    dct:description "Identificator (UUID) of a single allele frequency for a specific variant and population group."@en;
+    dcat:keyword "allele"@en, "frequency"@en, "frequencies"@en, "homozygous"@en, "heterozygous"@en;
+    csvw:PrimaryKey _:b0_b20;
+    csvw:foreignKey _:b0_b21, _:b0_b22;
+    csvw:column _:b0_b20, _:b0_b21, _:b0_b22, _:b0_b23, _:b0_b24, _:b0_b25, _:b0_b26, _:b0_b27, _:b0_b28, _:b0_b29, _:b0_b30;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b20
+    a csvw:Column;
+    csvw:name "id";
+    dct:description "Identificator (UUID) of a single allele frequency for a specific variant and population group."@en;
+    csvw:datatype "string";
+    csvw:length "36"^^xsd:nonNegativeInteger;
+    healthdcatap:hasCodingSystem [a dct:Standard; healthdcatap:hasCodingSystem <https://datatracker.ietf.org/doc/html/rfc4122>];
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b21
+    a csvw:Column;
+    csvw:name "variant_id";
+    dct:description "Technical field. Foreign Key linking the tables frequency and variant together."@en;
+    csvw:datatype "string";
+    csvw:length "36"^^xsd:nonNegativeInteger;
+    healthdcatap:hasCodingSystem [a dct:Standard; healthdcatap:hasCodingSystem <https://datatracker.ietf.org/doc/html/rfc4122>];
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b22
+    a csvw:Column;
+    csvw:name "population_id";
+    dct:description "Technical field. Foreign Key linking the tables frequency and population together."@en;
+    csvw:datatype "string";
+    csvw:length "36"^^xsd:nonNegativeInteger;
+    healthdcatap:hasCodingSystem [a dct:Standard; healthdcatap:hasCodingSystem <https://datatracker.ietf.org/doc/html/rfc4122>];
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b23
+    a csvw:Column;
+    csvw:name "allele_count";
+    dct:description "Total number of alternate alleles observed for this patient group (AC)."@en;
+    csvw:datatype "integer";
+    csvw:length "10"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b24
+    a csvw:Column;
+    csvw:name "allele_number";
+    dct:description "Total number of alleles for this population group (AN)."@en;
+    csvw:datatype "integer";
+    csvw:length "10"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b25
+    a csvw:Column;
+    csvw:name "allele_frequency";
+    dct:description "Allele frequency computed as AC/AN."@en;
+    csvw:datatype "float";
+    csvw:length "10"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b26
+    a csvw:Column;
+    csvw:name "homozygous_reference_count";
+    dct:description "Count of homozygous reference genotypes."@en;
+    csvw:datatype "integer";
+    csvw:length "10"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b27
+    a csvw:Column;
+    csvw:name "heterozygous_count";
+    dct:description "Count of heterozygous genotypes."@en;
+    csvw:datatype "integer";
+    csvw:length "10"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b28
+    a csvw:Column;
+    csvw:name "homozygous_alternate_count";
+    dct:description "Count of homozygous alternate genotypes."@en;
+    csvw:datatype "integer";
+    csvw:length "10"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b29
+    a csvw:Column;
+    csvw:name "filter_status";
+    dct:description "Variant QC filter flag (e.g., PASS)."@en;
+    csvw:datatype "string";
+    csvw:length "50"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+_:b0_b31
+    a csvw:Column;
+    csvw:name "quality_score";
+    dct:description "Aggregated quality score / confidence metric."@en;
+    csvw:datatype "float";
+    csvw:length "10"^^xsd:nonNegativeInteger;
+    dct:temporal [ a dct:PeriodOfTime; dcat:startDate "2019-07-01"^^xsd:date ].
+
+<https://datatracker.ietf.org/doc/html/rfc4122> a dct:Standard .
+<https://www.cpr.dk/cpr-systemet/opbygning-af-cpr-nummeret> a dct:Standard .
+<https://www.iso.org/iso-8601-date-and-time-format.html> a dct:Standard .
